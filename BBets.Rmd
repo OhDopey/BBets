@@ -28,7 +28,21 @@ source(file="BrLw.R")
  
 Report git commit structure:
 There are 3 questions and there should be at least 3 separate commits, at least one dealing with each of the 3 questions.
+
 1. What are the fair odds for a bet on matching birthdays in a 35 person class.
+
+Our plan is we will use a simulation where we hire 40 different brownlows and send them all out to try this and manipulate the value of odds until the averge of the different value comes out to zero.
+
+```{r}
+profit=as.numeric()
+for (i in 1:400) {
+profit[i]=BrLw(odds =4.4)
+}
+hist(profit)
+```
+
+   According to the histrogram, the fair odds are at around 4.4 to 4.5 to match a class of 35 students. This is where browlow is not making any profit.
+
 2. For what size class is a 2:1 odds bet fair.
 3. How much money would Brownlow be expected to end up with if the bets went as described.
 
