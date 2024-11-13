@@ -1,8 +1,8 @@
-BrLw <-function(numClass,odds,countoDo){
+BrLw <-function(numClass=35,odds=2,countoDo=637){
 
 days=1:365
-count=countoDo
-repeatn=numClass
+count=countoDo=637
+repeatn=numClass=35
 varstor=numeric()
   brownlow = 0
   for (i in 1:countoDo) {
